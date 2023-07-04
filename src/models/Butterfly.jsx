@@ -28,9 +28,9 @@ export function Butterfly(props) {
   const { nodes, materials, animations } = useGLTF('./models/butterfly/scene-transformed.glb', true)
   const { actions } = useAnimations(animations, group)
 
-  // useEffect(() => {
-  //  actions.Object_0.play()
-  // }, [actions.Object_0])
+  useEffect(() => {
+   actions.Object_0.play()
+  }, [actions.Object_0])
 
   return (
     <group ref={group} {...props} dispose={null}>
